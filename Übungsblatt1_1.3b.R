@@ -30,3 +30,5 @@ for (k in 1:nrow(grid)) {
   cat(times[k] / 1e9, "\n")
 }
 
+cbind(grid, time = times) |> ggplot(aes(n, time, color = as.factor(d))) + geom_line()
+
